@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEO Pulse Auditor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <p class="eyebrow">Auditoria SEO + Busca em IA</p>
+        <h1>Diagnóstico completo em segundos.</h1>
+        <p class="subtitle">
+          Cole o link do seu site e receba um painel profissional com prioridades de
+          implementação em Técnico, Conteúdo e Autoridade.
+        </p>
+      </section>
+
+      <form id="audit-form" class="search-box" novalidate>
+        <label for="site-url" class="sr-only">URL do site</label>
+        <input
+          id="site-url"
+          name="site-url"
+          type="url"
+          placeholder="https://seusite.com"
+          required
+        />
+        <button type="submit">Analisar</button>
+      </form>
+      <p id="form-feedback" class="feedback" role="alert" aria-live="polite"></p>
+
+      <section id="dashboard" class="dashboard hidden" aria-live="polite">
+        <header class="dashboard-header">
+          <div>
+            <p class="dash-label">Relatório</p>
+            <h2 id="audited-domain">-</h2>
+          </div>
+          <div class="score-card">
+            <span>SEO Score</span>
+            <strong id="overall-score">0</strong>
+            <small>/100</small>
+          </div>
+        </header>
+
+        <section class="metrics-grid" id="metrics-grid"></section>
+
+        <section class="controls">
+          <h3>Priorizar recomendações</h3>
+          <div class="filter-group" id="priority-filters"></div>
+        </section>
+
+        <section>
+          <h3>Recomendações por categoria</h3>
+          <div id="recommendations" class="recommendations"></div>
+        </section>
+
+        <section>
+          <h3>Visibilidade em buscas de IA</h3>
+          <div id="ai-searches" class="ai-grid"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
