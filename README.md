@@ -19,6 +19,18 @@ python3 -m http.server 4173
 
 Depois acesse `http://localhost:4173`.
 
+## Publicando no GitHub Pages
+
+Este repositório já inclui workflow para deploy automático em GitHub Pages:
+
+1. Faça push para a branch `main`.
+2. No GitHub, vá em **Settings → Pages**.
+3. Em **Build and deployment**, selecione **GitHub Actions**.
+4. Aguarde o workflow `Deploy static site to GitHub Pages` terminar.
+5. Seu site ficará em: `https://<usuario>.github.io/<repositorio>/`.
+
+Arquivo de workflow: `.github/workflows/deploy-pages.yml`.
+
 ## Próximos passos sugeridos
 
 1. Integrar backend para crawl real (sitemap, robots, headings, CWV e status codes).
